@@ -1,0 +1,5 @@
+C:\code\ContratoTrabalho\ContratoTrabalho\obj\Debug\net6.0\ContratoTrabalho.csproj.AssemblyReference.cache
+C:\code\ContratoTrabalho\ContratoTrabalho\obj\Debug\net6.0\ContratoTrabalho.GeneratedMSBuildEditorConfig.editorconfig
+C:\code\ContratoTrabalho\ContratoTrabalho\obj\Debug\net6.0\ContratoTrabalho.AssemblyInfoInputs.cache
+C:\code\ContratoTrabalho\ContratoTrabalho\obj\Debug\net6.0\ContratoTrabalho.AssemblyInfo.cs
+C:\code\ContratoTrabalho\ContratoTrabalho\obj\Debug\net6.0\ContratoTrabalho.csproj.CoreCompileInputs.cache
