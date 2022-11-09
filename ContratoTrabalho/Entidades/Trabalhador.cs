@@ -7,15 +7,37 @@ using ContratoTrabalho.Entidades.Enumeração;
 
 namespace ContratoTrabalho.Entidades
 {
-    public class Trabalhador
+    class Trabalhador
     {
         public string Nome { get; private set; }
-        //public NivelTrabalhador Nivel { get; set; }
+        public NivelTrabalhador Nivel { get; set; }
         public double SalarioBase { get; private set; }
-    }    
-    public void AddContrato(Contrato x)
-    {
-        Console.Write("Quantidade de horas no contrato: ");
-        
-    }
+
+        public Trabalhador(){}
+
+        public Trabalhador(string Nome, NivelTrabalhador Nivel, double SalarioBase)
+        {
+            this.Nome = Nome;
+            this.Nivel = Nivel;
+            this.SalarioBase = SalarioBase;
+        }
+
+        public void AddContrato(DateTime data, double valorporhora, int horas)
+        {
+            Console.Write("Quantidade dos contratos de trabalho: ");
+            var qtde = int.Parse(Console.ReadLine());
+
+        }
+
+        public void RemoverContrato(DateTime data, double valorporhora, int horas)
+        {
+
+        }
+
+        public override string ToString()
+        {
+            return $"Nome: {Nome}\nNível: {Nivel}\nSalário Base: {SalarioBase}";
+        }
+
+    }        
 }

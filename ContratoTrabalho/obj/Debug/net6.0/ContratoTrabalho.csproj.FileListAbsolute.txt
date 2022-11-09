@@ -3,3 +3,13 @@ C:\code\ContratoTrabalho\ContratoTrabalho\obj\Debug\net6.0\ContratoTrabalho.Gene
 C:\code\ContratoTrabalho\ContratoTrabalho\obj\Debug\net6.0\ContratoTrabalho.AssemblyInfoInputs.cache
 C:\code\ContratoTrabalho\ContratoTrabalho\obj\Debug\net6.0\ContratoTrabalho.AssemblyInfo.cs
 C:\code\ContratoTrabalho\ContratoTrabalho\obj\Debug\net6.0\ContratoTrabalho.csproj.CoreCompileInputs.cache
+C:\code\ContratoTrabalho\ContratoTrabalho\bin\Debug\net6.0\ContratoTrabalho.exe
+C:\code\ContratoTrabalho\ContratoTrabalho\bin\Debug\net6.0\ContratoTrabalho.deps.json
+C:\code\ContratoTrabalho\ContratoTrabalho\bin\Debug\net6.0\ContratoTrabalho.runtimeconfig.json
+C:\code\ContratoTrabalho\ContratoTrabalho\bin\Debug\net6.0\ContratoTrabalho.dll
+C:\code\ContratoTrabalho\ContratoTrabalho\bin\Debug\net6.0\ContratoTrabalho.pdb
+C:\code\ContratoTrabalho\ContratoTrabalho\obj\Debug\net6.0\ContratoTrabalho.dll
+C:\code\ContratoTrabalho\ContratoTrabalho\obj\Debug\net6.0\refint\ContratoTrabalho.dll
+C:\code\ContratoTrabalho\ContratoTrabalho\obj\Debug\net6.0\ContratoTrabalho.pdb
+C:\code\ContratoTrabalho\ContratoTrabalho\obj\Debug\net6.0\ContratoTrabalho.genruntimeconfig.cache
+C:\code\ContratoTrabalho\ContratoTrabalho\obj\Debug\net6.0\ref\ContratoTrabalho.dll

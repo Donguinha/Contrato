@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace ContratoTrabalho.Entidades
 {
-    public class Departamento
+    class Departamento
     {
-        public string NomeDepartamento { get; private set; }
+        public string NomeDepartamento { get; set; }
     }
 }
+

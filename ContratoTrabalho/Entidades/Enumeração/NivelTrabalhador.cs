@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace ContratoTrabalho.Entidades.Enumeração
 {
-    enum NivelTrabalhador
+    enum NivelTrabalhador : int
     {
-        Junior, NivelMedio, Senior
+        Junior = 0, 
+        NivelMedio = 1, 
+        Senior = 2
     }
 }
