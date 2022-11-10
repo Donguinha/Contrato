@@ -13,7 +13,7 @@ namespace ContratoTrabalho.Entidades
         public NivelTrabalhador Nivel { get; set; }
         public double SalarioBase { get; private set; }
 
-        public Trabalhador(){}
+        public Trabalhador() { }
 
         public Trabalhador(string Nome, NivelTrabalhador Nivel, double SalarioBase)
         {
@@ -22,10 +22,27 @@ namespace ContratoTrabalho.Entidades
             this.SalarioBase = SalarioBase;
         }
 
-        public void AddContrato(DateTime data, double valorporhora, int horas)
+        static void AddContrato(DateTime data, double valorporhora, int horas)
         {
+            List<Contrato> contratos = new List<Contrato>();
+
             Console.Write("Quantidade dos contratos de trabalho: ");
             var qtde = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < qtde; i++)
+            {
+                Console.Write("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\nData: ");
+                data = DateTime.Parse(Console.ReadLine());
+
+                Console.Write("Valor hora do trabalho: ");
+                valorporhora = int.Parse(Console.ReadLine());
+
+                Console.Write("Duração: ");
+                horas = int.Parse(Console.ReadLine());
+
+                contratos.Add(new Contrato(data, valorporhora, horas));
+
+            }
 
         }
 
@@ -39,5 +56,5 @@ namespace ContratoTrabalho.Entidades
             return $"Nome: {Nome}\nNível: {Nivel}\nSalário Base: {SalarioBase}";
         }
 
-    }        
+    }
 }

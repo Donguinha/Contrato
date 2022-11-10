@@ -10,20 +10,21 @@ namespace ContratoTrabalho
         static void Main(string[] args)
         {
             ReceberDepartamento();
-            Trabalhador trabalhador1 = new Trabalhador(); 
-            trabalhador1 = ReceberDados();
-            
+            Trabalhador trabalhador1 = new Trabalhador();
+            trabalhador1 = ReceberDadosDoTrabalhador();
+            List<Contrato> contratos = new List<Contrato>();
+            Trabalhador.AddContrato
         }
 
         static void ReceberDepartamento()
         {
             Departamento depar = new Departamento();
             Console.Write("Departamento: ");
-            depar.NomeDepartamento = Console.ReadLine();            
+            depar.NomeDepartamento = Console.ReadLine();
         }
 
-        static Trabalhador ReceberDados()
-        {            
+        static Trabalhador ReceberDadosDoTrabalhador()
+        {
             Console.Write("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\nDados do trabalhador\nNome: ");
             var nome = Console.ReadLine();
 
@@ -36,6 +37,6 @@ namespace ContratoTrabalho
             Trabalhador trab1 = new Trabalhador(nome, nivelenum, salario);
 
             return trab1;
-        }        
+        }
     }
 }
