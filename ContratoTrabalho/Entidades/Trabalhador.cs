@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,49 +13,44 @@ namespace ContratoTrabalho.Entidades
         public string Nome { get; private set; }
         public NivelTrabalhador Nivel { get; set; }
         public double SalarioBase { get; private set; }
+        public List<Contrato> Contrato { get; private set; } = new List<Contrato>();
 
-        public Trabalhador() { }
+        public Trabalhador(){}
 
-        public Trabalhador(string Nome, NivelTrabalhador Nivel, double SalarioBase)
+        public Trabalhador(string nome, NivelTrabalhador nivel, double salarioBase)
         {
-            this.Nome = Nome;
-            this.Nivel = Nivel;
-            this.SalarioBase = SalarioBase;
+            this.Nome = nome;
+            this.Nivel = nivel;
+            this.SalarioBase = salarioBase;
         }
 
-        static void AddContrato(DateTime data, double valorporhora, int horas)
+        public void AddContrato(Contrato contract)
         {
-            List<Contrato> contratos = new List<Contrato>();
+            Contrato.Add(contract);
+        }
 
-            Console.Write("Quantidade dos contratos de trabalho: ");
-            var qtde = int.Parse(Console.ReadLine());
+        public void RemoverContrato(Contrato contract)
+        {
+            Contrato.Remove(contract);
+        }
 
-            for (int i = 0; i < qtde; i++)
+        public double ReceberMes(int ano, int mes)
+        {        
+            var soma = SalarioBase;
+
+            foreach (Contrato cada in Contrato)
             {
-                Console.Write("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\nData: ");
-                data = DateTime.Parse(Console.ReadLine());
-
-                Console.Write("Valor hora do trabalho: ");
-                valorporhora = int.Parse(Console.ReadLine());
-
-                Console.Write("Duração: ");
-                horas = int.Parse(Console.ReadLine());
-
-                contratos.Add(new Contrato(data, valorporhora, horas));
-
+                if (ano == cada.Data.Year && mes == cada.Data.Month)
+                {
+                    soma += cada.ValorTotal();
+                }
             }
-
-        }
-
-        public void RemoverContrato(DateTime data, double valorporhora, int horas)
-        {
-
+            return soma;
         }
 
         public override string ToString()
         {
-            return $"Nome: {Nome}\nNível: {Nivel}\nSalário Base: {SalarioBase}";
-        }
-
+            return $"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\nNome: {Nome}\nNível: {Nivel}\nDepartamento: ";
+        }        
     }
 }

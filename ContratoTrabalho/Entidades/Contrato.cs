@@ -12,16 +12,18 @@ namespace ContratoTrabalho.Entidades
         public double ValorHora { get; set; }
         public int Horas { get; set; }
 
+        public Contrato() {}
+        
         public Contrato(DateTime data, double valorHora, int horas)
         {
-            this.Data = data;
+            Data = data;
             ValorHora = valorHora;
             Horas = horas;
         }
 
-        public double ValorTotal(double valorhora, int horas)
+        public double ValorTotal()
         {
-            return valorhora * horas;
+            return ValorHora * Horas;
         }
     }
 }

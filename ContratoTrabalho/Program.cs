@@ -2,6 +2,9 @@
 using ContratoTrabalho.Entidades.Enumeração;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Diagnostics;
+using System.Diagnostics.Contracts;
 
 namespace ContratoTrabalho
 {
@@ -10,20 +13,18 @@ namespace ContratoTrabalho
         static void Main(string[] args)
         {
             ReceberDepartamento();
-            Trabalhador trabalhador1 = new Trabalhador();
-            trabalhador1 = ReceberDadosDoTrabalhador();
-            List<Contrato> contratos = new List<Contrato>();
-            Trabalhador.AddContrato
+            ReceberDados();
+            
         }
 
         static void ReceberDepartamento()
         {
-            Departamento depar = new Departamento();
             Console.Write("Departamento: ");
-            depar.NomeDepartamento = Console.ReadLine();
+            var depart = Console.ReadLine();
+            Departamento depar1 = new Departamento(depart);
         }
 
-        static Trabalhador ReceberDadosDoTrabalhador()
+        static void ReceberDados()
         {
             Console.Write("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\nDados do trabalhador\nNome: ");
             var nome = Console.ReadLine();
@@ -34,9 +35,40 @@ namespace ContratoTrabalho
 
             Console.Write("Salário base: ");
             var salario = double.Parse(Console.ReadLine());
+
             Trabalhador trab1 = new Trabalhador(nome, nivelenum, salario);
 
-            return trab1;
+
+            Console.Write("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\nQuantidade dos contratos de trabalho: ");
+            var qtde = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < qtde; i++)
+            {
+                Console.Write("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\nData: ");
+                var data = DateTime.Parse(Console.ReadLine());
+
+                Console.Write("Valor hora do trabalho: ");
+                var valorporhora = double.Parse(Console.ReadLine());
+
+                Console.Write("Duração: ");
+                var horas = int.Parse(Console.ReadLine());
+
+                Contrato contratonovo = new Contrato(data, valorporhora, horas);
+
+                trab1.AddContrato(contratonovo);
+            }
+
+            Console.Write("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\nData para buscar valores dos contratos (MM/AAAA): ");
+            var datas = Console.ReadLine().Split('/');
+            var ano = int.Parse(datas[0]);
+            var mes = int.Parse(datas[1]);
+
+            var totalmes = trab1.ReceberMes(ano, mes);
+            Console.WriteLine(trab1);
+
+            Console.Write($"Valor recebido na data {datas}: {totalmes}");
         }
     }
 }
+
+

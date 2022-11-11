@@ -9,6 +9,11 @@ namespace ContratoTrabalho.Entidades
     class Departamento
     {
         public string NomeDepartamento { get; set; }
+
+        public Departamento(string nomeDepartamento)
+        {
+            NomeDepartamento = nomeDepartamento;
+        }
     }
 }
 
