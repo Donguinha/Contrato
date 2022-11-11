@@ -50,7 +50,7 @@ namespace ContratoTrabalho.Entidades
 
         public override string ToString()
         {
-            return $"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\nNome: {Nome}\nNível: {Nivel}\nDepartamento: ";
+            return $"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\nNome: {Nome}\nNível: {Nivel}\nDepartamento:  ";
         }        
     }
 }

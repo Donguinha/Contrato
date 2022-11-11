@@ -63,10 +63,9 @@ namespace ContratoTrabalho
             var ano = int.Parse(datas[0]);
             var mes = int.Parse(datas[1]);
 
-            var totalmes = trab1.ReceberMes(ano, mes);
             Console.WriteLine(trab1);
 
-            Console.Write($"Valor recebido na data {datas}: {totalmes}");
+            Console.Write($"Valor recebido na data {mes}{ano}: {trab1.ReceberMes(ano, mes)}");
         }
     }
 }
